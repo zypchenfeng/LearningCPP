@@ -84,4 +84,40 @@ for(size_t i =0; i<5; i++)
   // If we want to know what is stored in this address, we can dereference pointerToA:
   std::cout << "pointerToA points to " << * pointerToA << '\n';
   ```
-  
+
+#### Lesson 9: Overloading
+1. Overloading can be:
+  * class (constructors: w/ or w/o initial value)
+  * Operators (int operator +)
+
+#### Lesson 10: Templates
+1. Syntax1
+  ```
+  template <typename T>  // this is required, tell the compiler we are using a template
+  T functionName (T  parameter1,T  parameter2,...)
+  {
+      function statements;
+  }
+  ```
+2. Syntax2: if the type is different
+  ```
+  template <typename T, typename U, typename V>
+  T functionName (U  parameter1, V  parameter2,...)
+  {
+      function statements;
+  }
+  ```
+3. Template for classes
+  ```
+  template <class T>
+  class StudentRecord
+  {
+  ```
+  * The member functions must all be treated as generic functions. You will have to add the template command to each member function.
+  ```
+  template<class T>
+  StudentRecord<T>::StudentRecord(T input)
+  {
+      grade=input;
+  }
+  ```
