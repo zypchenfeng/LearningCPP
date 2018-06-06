@@ -121,3 +121,68 @@ for(size_t i =0; i<5; i++)
       grade=input;
   }
   ```
+
+#### Lesson 11 Classes and Inheritance
+  1. Syntax
+  ```
+  //The derived class with Student as base class
+  class GradStudent : public Student
+  {
+      private:
+          string degree;
+      public:
+          GradStudent();
+          void setDegree(string degreeIn);
+          string getDegree();
+  };
+  ```
+  2. Access Control for Inherited Classes
+    * Public Inheritance means all public members of the base class are accessible to the derived class
+    * Private Inheritance means all members of the base class are private to the derived class
+    * Protected Inheritance means all members of the base class are protected to the derived class.
+  3. Example of private Inheritance
+    ```
+    //The derived class with Student as base class
+    class GradStudent : private Student
+    {
+        private:
+            string degree;
+        public:
+            GradStudent();
+            void setDegree(string degreeIn);
+            string getDegree();
+            void setStudentId(int idIn); //need this to access Student::setId()
+            int getStudentId(); //need this to access Student::getId()
+    };
+    ```
+    When we write the member functions, we must explicitly refer to the Student class.
+    ```
+    int GradStudent::getStudentId()
+    {
+        //We must access getId() as a private function
+        return Student::getId();
+    }
+    void GradStudent::setStudentId(int idIn)
+    {
+        //We must access setId() as a private function
+        Student::setId(idIn);
+    }
+    ```
+
+  4. Multiple Inheritance
+    * Syntax `class DerivedClass : access BaseClass1, ... ,access BaseClassN`
+    e.g.
+    ```
+    class TA: public Staff, public GradStudent
+    {
+        private:
+            string supervisor;
+        public:
+            TA();
+            void setSupervisor(string input);
+            string getSupervisor();
+    };
+    ```
+
+
+#### Lesson 12: PolyMorphism
