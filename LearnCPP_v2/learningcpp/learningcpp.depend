@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1527953014 source:d:\documents\learning\cpp\learncpp_v2\learningcpp\student.cpp
+	"student.h"
+
+1527953014 d:\documents\learning\cpp\learncpp_v2\learningcpp\student.h
+	<iostream>
+	<string>
+
