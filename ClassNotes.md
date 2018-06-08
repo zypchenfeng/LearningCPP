@@ -186,3 +186,8 @@ for(size_t i =0; i<5; i++)
 
 
 #### Lesson 12: PolyMorphism
+1. Inheritance issue: The term e1 (example of class pointer instance) is statically bound during compile. We want it to be dynamically bound during execution.
+2. Virtual function:
+  * Syntax `virtual float calcWeeklyPay();`
+  * In the Inherited class, need to redefine as `float calcWeeklyPay();`
+3. Pure virtual function
