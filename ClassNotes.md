@@ -190,4 +190,4 @@ for(size_t i =0; i<5; i++)
 2. Virtual function:
   * Syntax `virtual float calcWeeklyPay();`
   * In the Inherited class, need to redefine as `float calcWeeklyPay();`
-3. Pure virtual function
+3. Pure virtual function: A pure virtual function is used when the base class has a function that will be defined in its derived class, but it has no meaningful definition in the base class.
